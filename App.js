@@ -47,6 +47,22 @@ const App: () => Node = () => {
       IconComponent: () => <DevicesSvg height={28} width={28} />,
       text: 'Devices',
     },
+    {
+      IconComponent: () => <RechargeSvg height={32} width={23} />,
+      text: 'Recharge1',
+    },
+    {
+      IconComponent: () => <GiftCardsSvg height={21.46} width={31.13} />,
+      text: 'Gift Cards1',
+    },
+    {
+      IconComponent: () => <OffersSvg height={26.13} width={27.55} />,
+      text: 'Offers1',
+    },
+    {
+      IconComponent: () => <DevicesSvg height={28} width={28} />,
+      text: 'Devices1',
+    },
   ];
 
   return (
@@ -56,9 +72,12 @@ const App: () => Node = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={[styles.container, styles.backgroundStyle]}>
         <View style={styles.componentsContainer}>
-          <View style={styles.rectanglesContainer}>
+          <ScrollView
+            horizontal
+            style={styles.rectanglesContainer}
+            showsHorizontalScrollIndicator={false}>
             <IconsWidget icons={rectangles} />
-          </View>
+          </ScrollView>
           <View style={styles.userContainer}>
             <View style={styles.userProfile}>
               <View style={styles.imageNameContainer}>
@@ -205,9 +224,9 @@ const styles = StyleSheet.create({
   },
   rectanglesContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
     flexDirection: 'row',
-    width: '100%',
+    // width: '100%',
     height: 87,
     marginVertical: 20,
   },
